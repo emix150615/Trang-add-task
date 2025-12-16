@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📝 Todo List</h1>
+
+    <a class="btn-add" href="/task/new">+ New Task</a>
+
+    <ul class="task-list">
+        <% if (tasks && tasks.length > 0) { %>
+            <% tasks.forEach(task => { %>
+                <li class="task <%= task.isDone ? 'done' : '' %>">
+                    <div>
+                        <strong><%= task.title %></strong>
+                        <span>👤 <%= task.user %></span>
+                    </div>
+
+                    <div class="actions">
+                        <% if (!task.isDone) { %>
+                            <a class="btn done-btn" href="/task/done/<%= task._id %>">Done</a>
+                        <% } %>
+                        <a class="btn delete-btn" href="/task/delete/<%= task._id %>">Delete</a>
+                    </div>
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li class="empty">No tasks yet</li>
+        <% } %>
+    </ul>
+</div>
+
+</body>
+</html>

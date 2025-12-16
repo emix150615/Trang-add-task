@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    display: block;
+    text-align: center;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.btn-add:hover {
+    background: #0056b3;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.task.done {
+    background: #e0ffe5;
+    text-decoration: line-through;
+    color: #555;
+}
+
+.task span {
+    display: block;
+    font-size: 13px;
+    color: #777;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+
+.done-btn {
+    background: #28a745;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.done-btn:hover {
+    background: #1e7e34;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
+}
+
+.empty {
+    text-align: center;
+    color: #888;
+}
